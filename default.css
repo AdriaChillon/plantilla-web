@@ -415,7 +415,6 @@
 		}
 	}
 	/* 2-Animació del hover a la imatge */
-
 	.box .image img {
 		transition: transform 2s;
 		/* Transición de 2 segundos para una velocidad más lenta */
@@ -447,4 +446,13 @@
 			transform: rotate(360deg);
 			/* Rotación completa a 360 grados en sentido horario al final */
 		}
+	}
+	/* 3-Canvi de colors del botons clickables */
+	.button:hover {
+		background-color: #c715a6;
+		/* Cambia el color de fondo al pasar el ratón por encima */
+		color: #2910b6;
+		/* Cambia el color del texto al pasar el ratón por encima */
+		transition: background-color 0.5s, color 0.5s;
+		/* Agrega una transición suave para el cambio de color */
 	}
