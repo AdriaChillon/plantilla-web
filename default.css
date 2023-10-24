@@ -414,3 +414,37 @@
 			/* Posición final a la derecha del banner */
 		}
 	}
+	/* 2-Animació del hover a la imatge */
+
+	.box .image img {
+		transition: transform 2s;
+		/* Transición de 2 segundos para una velocidad más lenta */
+	}
+
+	.box .image:hover img {
+		animation: rotateImage 1s linear forwards;
+		/* Inicia la animación cuando se pasa el ratón por encima del contenedor .box .image */
+		transform-origin: center;
+		/* El punto de rotación está en el centro de la imagen */
+		margin-bottom: 80px;
+		/* Ajusta el margen para que el texto baje más y se vea completo */
+	}
+
+	.box a:hover + span {
+		color: red !important;
+		/* Cambia el color del texto a rojo al pasar el ratón por encima del contenedor .box .image */
+		pointer-events: auto;
+		/* Habilita la interacción con el texto */	
+	}
+
+	@keyframes rotateImage {
+		from {
+			transform: rotate(0deg);
+			/* Sin rotación al principio */
+		}
+
+		to {
+			transform: rotate(360deg);
+			/* Rotación completa a 360 grados en sentido horario al final */
+		}
+	}
